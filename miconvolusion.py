@@ -3,17 +3,12 @@ import numpy as np
 
 def convolusion(A,B):
     
-    C2 = []
-    columnasM = len(A[0])
-    renglonesM = len(A)
-    columnasFiltro = len(B[0])
-    renglonesFiltro = len(B)
-        
+    C2 = []        
     contadorRen = 0
-    while renglonesFiltro + contadorRen <= renglonesM:
+    while (len(B)) + contadorRen <= (len(A)):
         C =[]
         contadorCol = 0
-        while columnasFiltro + contadorCol <=  columnasM:
+        while (len(B[0]) + contadorCol )<=  (len(A[0])):
             for c in range(len(A)):        
                 suma = 0
                 for i in range(len(B)):
